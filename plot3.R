@@ -12,9 +12,9 @@ dateandtime <- strptime(paste(subdata$Date, subdata$Time, sep=" "), "%d/%m/%Y %H
 
 #Convert to numeric
 subdata$Global_active_power <- as.numeric(subdata$Global_active_power)
-Sub_metering_1 <- as.numeric(subSetData$Sub_metering_1)
-Sub_metering_2 <- as.numeric(subSetData$Sub_metering_2)
-Sub_metering_3 <- as.numeric(subSetData$Sub_metering_3)
+subdata$Sub_metering_1 <- as.numeric(subSetData$Sub_metering_1)
+subdata$Sub_metering_2 <- as.numeric(subSetData$Sub_metering_2)
+subdata$Sub_metering_3 <- as.numeric(subSetData$Sub_metering_3)
 
 #call PNG Graphic engine
 png(filename = "plot3.png", width = 480, height = 480, units = "px")
